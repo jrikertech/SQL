@@ -1,0 +1,25 @@
+CREATE TABLE shoe_store (id INTEGER PRIMARY KEY, name TEXT, price TEXT, aisle TEXT, pounds TEXT);
+INSERT INTO shoe_store VALUES (1, "Nike", 100.25, 2, 0.5);
+INSERT INTO shoe_store VALUES (2, "Adidas", 75.25, 2, 0.76);
+INSERT INTO shoe_store VALUES (3, "New Balance", 80.75, 3, 1.3);
+INSERT INTO shoe_store VALUES (4, "HOKA", 125.99, 5, 1.4);
+INSERT INTO shoe_store VALUES (5, "Vans", 65.55, 4, 0.75);
+INSERT INTO shoe_store VALUES (6, "Birkenstocks", 145.25, 8, 0.8);
+INSERT INTO  shoe_store VALUES (7, "North Face", 185.99, 11, 0.45);
+INSERT INTO shoe_store VALUES (8, "Steve Madden", 135.55, 6, 1.5);
+INSERT INTO shoe_store VALUES (9, "Crocs", 100.99, 12, 1);
+INSERT INTO shoe_store VALUES (10, "Asics", 125.55, 14, 0.75);
+INSERT INTO shoe_store VALUES (11, "Shoelaces", 1.99, 1, 0.1);
+INSERT INTO shoe_store VALUES (12, "M&Ms", 1.99, 1, 0.1);
+INSERT INTO shoe_store VALUES (13, "Coca-Cola", 1.99, 1, 0.1);
+INSERT INTO shoe_store VALUES (14, "Cell Phone Charger", 10.99, 1, 0.1);
+INSERT INTO shoe_store VALUES (15, "Cell Phone Case", 25.99, 1, 0.3);
+
+--display total sum of store products
+SELECT SUM(price) from shoe_store
+
+--what is the avg price of store products
+SELECT avg(price) from shoe_store
+
+--what are the heaviest items
+SELECT name, pounds from shoe_store order by pounds asc
